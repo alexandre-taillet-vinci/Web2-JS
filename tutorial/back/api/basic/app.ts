@@ -2,17 +2,29 @@ import express, { ErrorRequestHandler } from "express";
 
 import pizzaRouter from "./routes/pizzas";
 import usersRouter from "./routes/users";
-import path from "node:path";
+import drinksRouter from "./routes/drinks";
 
 
 const app = express();
-
+app.use((_req, _res, next) => {
+    console.log(
+        "Time:",
+        new Date().toLocaleString("fr-FR", { timeZone: "Europe/Brussels" })
+    );
+    next();
+});
+app.get("/", (_req, res) => {
+    res.send("Hello 😎");
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+
 app.use("/users", usersRouter);
 app.use("/pizzas", pizzaRouter);
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static assets
+app.use("/drinks", drinksRouter);
+////app.use(express.static(path.join(__dirname, 'public'))); // Serve static assets
 
 const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
     console.error(err.stack);
