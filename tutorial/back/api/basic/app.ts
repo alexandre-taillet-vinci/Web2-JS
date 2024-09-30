@@ -1,8 +1,8 @@
 import express, { ErrorRequestHandler } from "express";
 
+import drinksRouter from "./routes/drinks";
 import pizzaRouter from "./routes/pizzas";
 import usersRouter from "./routes/users";
-import drinksRouter from "./routes/drinks";
 
 
 const app = express();
