@@ -42,6 +42,13 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
     const film: Film = req.body;
+    if(!film) {
+        return res.status(400).json({ message: "Missing film" });
+    }
+
+    if(defaultFilms.find(f => f.id === film.id)) {
+        return res.status(409).json({ message: "Film already exists" });
+    }
     defaultFilms.push(film);
     return res.status(201).json(film);
 });
@@ -55,6 +62,8 @@ router.get("/", (_req, res) => {
     }
     return res.json(defaultFilms);
 });
+
+
 
 
 export default router;
