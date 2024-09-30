@@ -1,0 +1,56 @@
+### TEST ROUTES
+@baseUri = http://localhost:3000
+GET {{baseUri}}/films
+
+### GET ID
+GET {{baseUri}}/films/1
+
+### GET BY DURATION
+GET {{baseUri}}/films?minimum-duration=140
+
+
+### POST CREATE
+POST {{baseUri}}/films
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "duration": 178,
+    "year": 2001
+}
+
+
+### DELETE
+DELETE {{baseUri}}/films/2
+
+### PUT UPDATE
+PUT {{baseUri}}/films/1
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings 2: The Fellowship of the Ring",
+    "duration": 178,
+    "year": 2001,
+    "director": "Peter Jackson"
+}
+
+### PUT UPDATE
+PUT {{baseUri}}/films/1
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "duration": 178,
+    "year": 2001,
+    "director": "Peter Jackson"
+}
+### PATCH UPDATE
+PATCH {{baseUri}}/films/1
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "duration": 178,
+    "year": 2001,
+    "director": "Peter Jackson"
+}

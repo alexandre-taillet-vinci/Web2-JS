@@ -16,5 +16,6 @@ Content-Type: application/json
 {
     "title": "The Lord of the Rings: The Fellowship of the Ring",
     "duration": 178,
-    "year": 2001
+    "year": 2001,
+    "director": "Peter Jackson"
 }
