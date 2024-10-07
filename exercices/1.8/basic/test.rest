@@ -21,7 +21,7 @@ Content-Type: application/json
 
 
 ### DELETE
-DELETE {{baseUri}}/films/1
+DELETE {{baseUri}}/films/2
 
 ### PUT UPDATE
 PUT {{baseUri}}/films/1

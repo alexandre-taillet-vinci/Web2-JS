@@ -3,7 +3,7 @@ import { Router } from "express";
 import path from "node:path";
 import { Film } from "../types";
 import { parse, serialize } from "../utils/json";
-const jsonDbPath = path.join(__dirname, "/../data/films.json");
+const jsonDbPath = path.join(__dirname, "/../data/drinks.json");
 
 
 
@@ -153,7 +153,6 @@ router.put("/:id", (req, res) => {
             imageUrl,
         };
         films.push(newFilm);
-        serialize(jsonDbPath, films);
         return res.json(newFilm);
     }
     const film = defaultFilms[index];
