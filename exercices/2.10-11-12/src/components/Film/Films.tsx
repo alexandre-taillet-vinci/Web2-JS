@@ -1,4 +1,4 @@
-import { Film, FilmProps } from ".";
+import { Film, FilmProps } from "../../../../2.7/src/components/Film";
 
 
 

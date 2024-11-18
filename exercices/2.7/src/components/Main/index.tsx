@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { Films } from '../../../../2.10-11-12/src/components/Film/Films'
 import { FilmProps } from '../Film'
 import './App.css'
-import { Films } from '../Film/Films'
 
 const defaultFilms: FilmProps[] = [
   {
