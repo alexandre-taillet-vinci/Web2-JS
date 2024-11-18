@@ -2,4 +2,4 @@
 
 Based on https://e-vinci.github.io/js2/
 
-Made with ❤️ by Alexandre Taillet 
+Made with ❤️ by Alexandre Taillet.
